@@ -1,0 +1,20 @@
+public class Solution {
+	int a;
+	public int fibonacci(int n){
+		if(n==1){
+			a=0;
+		}
+		else
+			if(n==2){
+				a=1;
+			}
+			else a=fibonacci(n-1)+fibonacci(n-2);
+		return a;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Solution s=new Solution();
+		System.out.println(s.fibonacci(10));
+		System.out.println(s.fibonacci(1));
+	}
+}
