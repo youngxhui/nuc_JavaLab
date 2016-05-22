@@ -1,3 +1,4 @@
+﻿import java.util.Scanner;
 
 public class Fb {
 
@@ -5,8 +6,10 @@ public class Fb {
 		// TODO Auto-generated method stub
         Scanner s = new Scanner(System.in);
         Solution sl = new Solution();
+		System.out.println("请输入你要查看第几个数");
 		int a = s.nextInt();
         int fib = sl.fibonacci(a);
+        System.out.println("第" + a + "个数的值为：" + fib);
         
 		s.close();
       
