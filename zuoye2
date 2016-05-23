@@ -1,0 +1,27 @@
+import java.util.List;
+import java.util.ListIterator;
+import java.util.LinkedList;
+import java.util.Iterator;
+public class Solution {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList<Integer> s=new LinkedList<Integer>();
+		s.add(1);
+		s.add(2);
+		s.add(3);
+		s.add(3);
+		s.add(4);
+		s.add(5);
+		s.add(3);
+		for(int i=0;i<s.size();i++){
+			for(int j=s.size()-1;j>i;j--){
+				if(s.get(j).equals(s.get(i))){
+						s.remove(i);	
+				}
+			}
+		}
+		s.remove(4);
+		System.out.println(s);
+		}
+	}
