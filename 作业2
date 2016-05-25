@@ -1,0 +1,36 @@
+	  class ListNode {
+	     int val;
+	      ListNode next;
+	      ListNode(int x) { val = x; }
+	  }
+	 
+	public class Solution2 {
+	    /**
+	     * @param head a ListNode
+	     * @param val an integer
+	     * @return a ListNode
+	     */
+	    public ListNode removeElements(ListNode head, int val) {
+	    ListNode p = head;
+	    
+	    if(head.next==null)
+	      {
+	    	  return head;
+	      }
+	      
+	      while(head.next!=null)
+	      {
+	    	  if(p.val==val)
+	    	  {
+	    		  p.next=p.next.next;
+	    		  break;
+	    	  }
+	    	  p=p.next;
+	      }
+	      return head;//搞不清楚该返回什么。。。如果p被赋值的是head的引用，p所做的修改对head也同样起作用，但是c中p和head似乎就背道而驰了？？
+	      
+	      
+	    
+	}
+	}
+
