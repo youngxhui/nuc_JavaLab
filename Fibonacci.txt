@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Solution {
+
+	 public static int fibonacci(int n) {
+	        // write your code here
+	    	    int a[]=new int[10000];
+	    	     a[1]=0;
+	    	     a[2]=1;
+				for(int i=2;i<10000;i++){
+		            a[i]=a[i-1]+a[i-2];
+		        }
+		        return a[n-1];
+
+			}
+	   
+	 public static void main(String[] args){
+		 System.out.println("你想知道第几个数？");
+		 Scanner rd=new Scanner(System.in);
+		 int n=rd.nextInt();
+		 System.out.println(fibonacci(n));
+	 }
+}
