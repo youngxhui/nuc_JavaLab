@@ -1,0 +1,14 @@
+public class Text02 {
+	public int getMax(int a,int b){
+		int p[]=new int[2];
+		p[0]=a;  p[2]=b;
+		boolean s;
+		s=(b>a);
+		int y=get0and1(s);
+		return p[y];
+		
+	}
+	public int get0and1(boolean f){
+		 return f?1:0;
+		} 
+}
