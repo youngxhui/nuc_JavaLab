@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class aa{
+     public static void main(String []args 0){
+         double a,b;
+         Scanner sca=new Scanner(System.in);
+         System.out.println("请输入两个需要比较的数：");
+         a=sca.nextDouble();
+         b=sca.new Double();
+         double c=a>b?a:b;
+         System.out.println("较大的数为："+c);
+     }
+     
+}
