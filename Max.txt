@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Max {
+    public int getMax(int a,int b){
+    	List<Integer> list = new ArrayList<Integer>();
+    	list.add(a);
+    	list.add(b);
+    	int max = Collections.max(list);
+    	return max;
+    }
+    public static void main(String[] args) {
+		Max m = new Max();
+		int a = 1;
+		int b = 2;
+	   System.out.println(m.getMax(a, b));
+	}
+}
