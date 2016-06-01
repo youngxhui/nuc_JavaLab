@@ -1,14 +1,14 @@
-public class MaxNumber {
+public class Max {
 
 	static int max(int a,int b){
 		
-		return a*(b/a)+b*(a/b)+1;//这种方法必须要a,b不能为倍数
+		return a*(b/a)+b*(a/b)+1;//杩欑鏂规硶蹇呴』瑕乤,b涓嶈兘涓哄�嶆暟
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		for(int i=2;i<=100;i++){
 			if(max(i,i+1)<i||max(i+1,i)<i){
-				System.out.println("错误");
+				System.out.println("閿欒");
 			}
 		}
 	}
