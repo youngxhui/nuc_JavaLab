@@ -1,0 +1,13 @@
+import java.math.*;
+public class Max {
+	public static int getMax(int a,int b){
+		return Math.max(a, b);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(getMax(1,1));
+
+	}
+
+}
