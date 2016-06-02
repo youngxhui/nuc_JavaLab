@@ -1,0 +1,10 @@
+import.java.util.*;
+public class Max{
+   public static void getMax(int a,int b){
+      Scanner in=new Scanner(System.in);
+      System.out.println("请输入两个数");
+      a=in.nextInt();
+      b=in.nextInt();
+      System.out.println(a>b?a:b);
+   }
+}
