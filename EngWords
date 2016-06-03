@@ -1,0 +1,22 @@
+public class EngWords {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String string = in.nextLine(); // Eng文本
+		String[] article = string.split(" ");
+		String word = in.next(); // 计量单词
+		int count = countWord(article, article.length, word);
+		System.out.println(count);
+		in.close();
+	}
+
+	public static int countWord(String[] article, int n, String word) {
+		int sum = 0;
+		for (int i = 0; i < article.length; i++) {
+			if (article[i].equals(word)) {
+				sum++;
+			}
+		}
+		return sum;
+	}
+}
