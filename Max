@@ -1,0 +1,26 @@
+package nuc.edu.zb.jyg;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Max {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int x = in.nextInt();
+		int y = in.nextInt();
+		Max max = new Max();
+		int z = max.getMax(x, y); // 返回两数中较大的数,相同任意返
+		System.out.println(z);
+		in.close();
+	}
+
+	public int getMax(int a, int b) {
+		ArrayList<Integer> aList = new ArrayList<>();
+		aList.add(a);
+		aList.add(b);
+		Collections.sort(aList);
+		return aList.get(1);
+	}
+}
