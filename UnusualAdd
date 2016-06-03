@@ -1,0 +1,16 @@
+public class UnusualAdd {
+	public static void main(String[] args) {
+		UnusualAdd uAdd = new UnusualAdd();
+		int sum = uAdd.addAB(1, 2);
+		System.out.println(sum);
+	}
+
+	public int addAB(int A, int B) {
+		if (B == 0) {
+			return A;
+		}
+		int sum = A ^ B;
+		int move = (A & B) << 1;
+		return addAB(sum, move);
+	}
+}
