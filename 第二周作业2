@@ -1,0 +1,24 @@
+public class Max {
+	public int getMax(int a,int b){
+		
+		return (a*(a/b) + b*(b/a))/(a/b + b/a); 
+	}
+}
+
+
+import java.util.Scanner;
+
+public class testMax {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Max m=new Max();
+		Scanner input=new Scanner(System.in);
+		int c=input.nextInt();
+		int d=input.nextInt();
+		
+		System.out.println(m.getMax(c, d));
+	}
+
+}
