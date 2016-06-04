@@ -1,0 +1,68 @@
+public class Board {
+	public boolean checkWon(int[][] board){
+		 boolean a = true;
+		    		//判断行
+		     	  for(int i = 0;i < 3;i++){
+		 		     for(int j = 0;j < 3;j++){
+		 		    	 if(board[i][j] == 1){
+		 					  a = true;
+		 				  }
+		 				  if(board[i][j] == -1){
+		 					  a = false;
+						  }
+		 		     }
+		    	  }
+		     	  //判断列
+		 	   for(int i = 0;i < 3;i++){
+		 		   for(int j = 0;j < 3;j++){
+		 			  if(board[j][i] == 1){
+		 					  a = true;
+		 			  }
+		 		      if(board[j][i] == -1){
+		 					  a= false;
+		 				  }
+		 		     }
+		 		}
+		 	   	//判断主对角线
+		 		   for(int i = 0;i < 3;i++){
+		 			     for(int j = 0;j < 3;j++){	 
+		 		              if(i == j){
+		 					   if(board[i][j] == 1){
+		 						  a = true;
+		 					  }
+		 					  if(board[i][j] == -1){
+								  a = false;
+		 		  }
+		 				  }
+		 			     }
+		 	   }
+		 		   //判断副对角线
+		 		   for(int i = 0;i < 3;i++){
+		 			     for(int j = 0;j < 3;j++){
+		 	                if(i + j == 2){
+		 					  if(board[i][j] == 1){
+		 						  a= true;
+		 					  }
+		 					  if(board[i][j] == -1){
+		 						  a= false;
+		 					  }
+		 			    }			  
+		 			     }
+		 		   }
+		 		  
+		     	  return a;
+		       }
+
+
+
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[][] a={{1,0,1},{1,-1,-1},{1,-1,0}};
+		Board b=new Board();
+		System.out.println(b.checkWon(a));
+	}
+
+}
