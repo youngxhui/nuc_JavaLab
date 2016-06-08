@@ -1,0 +1,22 @@
+public class Frequency {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+class TestFrequency{
+	public int getFrequency(String[] article,int n,String word){
+		int sum = 0;
+		if(n <= 1000){
+			for(int i = 0;i < n;i++){
+				if(article[i].equals(word)){
+					sum++;
+				}
+			}
+		}
+		
+		return sum;
+	}
+}
