@@ -1,0 +1,19 @@
+
+
+public class UnusualAdd {
+	public int addAB(int a, int b) {
+        // write code here
+		 if(b==0)  
+		        return a;  
+		  int sum=a^b;  
+		  int carry=(a&b)<<1;  
+		 return addAB(sum,carry);  
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a=4,b=3;
+		UnusualAdd u=new UnusualAdd();
+		System.out.println(u.addAB(a, b));
+	}
+
+}
