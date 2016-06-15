@@ -1,0 +1,31 @@
+public class TestCoins {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Coins c = new Coins();
+    System.out.println(c.countWays(6));
+	}
+
+}
+class Coins{
+	public int countWays(int n){
+	int count = 0;
+	if(n < 10000){
+	for(int a = 0;a <= n;a++){//1分钱
+		for(int b = 0;b <= n/5;b++){//5分钱
+			for(int c = 0;c <= n/10;c++){//10分钱
+				for(int d = 0;d <= n/25;d++){//25分钱
+					if((1 * a + b * 5 + c * 10 + d * 25) == n){
+						count ++;
+					}
+				}
+			}
+		}
+	}
+	}
+	
+	
+	
+	return count;
+	}
+}
