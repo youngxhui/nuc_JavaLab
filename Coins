@@ -1,0 +1,35 @@
+package nuc.edu.jyg.four;
+
+import java.util.Scanner;
+
+public class Coins {
+
+	public static void main(String[] args) {
+		int number;
+		int count = 0;
+		Scanner in = new Scanner(System.in);
+		Coins coins = new Coins();
+		number = in.nextInt();
+		if (number < 10000) {
+			count = coins.countWays(number);
+		}
+		System.out.println(count);
+		in.close();
+	}
+
+	public int countWays(int n) {
+		int kindsof = 0; // 几种方法
+		for (int one = 0; one <= n; one++) {
+			for (int five = 0; five <= n / 5; five++) {
+				for (int ten = 0; ten <= n / 10; ten++) {
+					for (int twentyfive = 0; twentyfive <= n / 25; twentyfive++) {
+						if (one + five * 5 + ten * 10 + twentyfive * 25 == n) {
+							kindsof++;
+						}
+					}
+				}
+			}
+		}
+		return kindsof;
+	}
+}
