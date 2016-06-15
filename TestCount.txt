@@ -1,0 +1,39 @@
+public class TestCount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Count2 c = new Count2();
+    System.out.println(c.countNumberOf2s(10));
+	}
+
+}
+class Count2{
+	public int countNumberOf2s(int n){
+		 int factor = 1;
+	        int lower = 0;
+	        int higher = 0;
+	        int cur = 0;
+	        int cnt = 0;
+	        while(n/factor != 0)
+	        {
+	            lower = n - (n/factor)*factor;
+	            cur = (n/factor)%10;
+	            higher = n/(factor*10);
+	            switch(cur)
+	            {
+	                case 0:
+	                case 1:
+	                    cnt += (higher)*factor;
+	                break;
+	                case 2:
+	                    cnt += (higher)*factor + lower+1;  //1为最低位取0时
+	                break;
+	                default:
+	                    cnt += (higher+1)*factor;
+	                break;
+	            }
+	            factor *= 10;
+	        }
+	        return cnt;
+	}
+}
