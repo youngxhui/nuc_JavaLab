@@ -1,0 +1,28 @@
+package nuc.edu.jyg.four;
+
+public class Count2 {
+
+	public static void main(String[] args) {
+		int number = 0;
+		Count2 count2 = new Count2();
+		number = count2.countNumberOf2s(22);
+		System.out.println(number);
+	}
+
+	public int countNumberOf2s(int n) { // n为右边界
+		int x = 0;
+		String yString = "" + n;
+		String[] temporary = new String[yString.length()];
+		for (int i = 0; i <= n; i++) {
+			String variable = "" + i;
+			temporary = variable.split("");
+			for (int j = 0; j < temporary.length; j++) {
+				if (temporary[j].equals("2")) {
+					x++;
+				}
+			}
+		}
+		return x;
+	}
+
+}
