@@ -1,6 +1,7 @@
 import java.util.*;
 /*
 参考自网络
+详情内容参考http://www.cnblogs.com/python27/archive/2013/09/05/3303721.html
 */
 public class Coins {
     public int countWays(int n) {
