@@ -1,0 +1,29 @@
+package git;
+
+import java.util.*;
+
+public class Count2 {
+    public static int countNumberOf2s(int n) {
+	int x=0;
+	for(int i=0;i<=n;i++)
+	{
+		
+		if(n%10==2)
+		{
+			x++;
+		}
+		n/=10;
+	}
+	return x;
+    }
+    
+
+
+public static void main(String args[]){
+	Scanner sc=new Scanner(System.in);
+	int s=0;
+	s=sc.nextInt();
+	System.out.println(countNumberOf2s(s));
+}
+	
+}
