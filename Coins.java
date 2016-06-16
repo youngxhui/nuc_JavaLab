@@ -15,6 +15,6 @@ public class Coins {
     }
 	public static void main(String[] args) {
 		Coins c=new Coins();
-		System.out.println(c.countWays(2000));
+		System.out.println(c.countWays(100000));//以最大量计算
 	}
 }
