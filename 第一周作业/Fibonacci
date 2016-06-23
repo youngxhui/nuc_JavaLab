@@ -1,0 +1,41 @@
+
+import java.io.*;
+import java.util.Scanner;
+public class Solution {
+	static long i = 0; 
+	static long j = 1;
+	static long result = 0;
+	public static void main(String[] args){
+		System.out.println("你想查的数为:"+calculate());
+	}
+	public static long get(){
+		boolean y=false;
+		long a = 0;
+		Scanner sc = new Scanner(System.in);
+		while(y == false){
+			System.out.println("你想知道第几位数？请输入：");
+			a = sc.nextLong();
+			if (a>=1){
+				sc.close();
+				y=true;
+			}
+			else 
+				System.out.println("输入不规范，请重新输入");
+		}
+		return a;
+	}
+	public static long calculate(){
+		long n = get();
+		if (n == 1) result = 0;
+		else if (n==2) result = 1;
+		else {
+			for(int x= 2; x<n; x++){
+				result = i + j;
+				i = j;
+				j = result;
+			}
+		}
+		return result;
+	}
+	
+}
