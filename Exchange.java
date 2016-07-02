@@ -16,5 +16,4 @@ public class Exchange {
 			System.out.println(i);
 		}
 	}
-
 }
