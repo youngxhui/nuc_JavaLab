@@ -1,0 +1,13 @@
+public class BigInsert {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    
+	}
+	public int bigInsert(int n,int m,int j,int i){
+		m = m << j;
+		
+		return n | m ;
+	}
+
+}
