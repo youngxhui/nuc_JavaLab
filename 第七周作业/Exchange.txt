@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Exchange {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     Exchange e = new Exchange();
+	 int[] arr = new int[]{1,2};
+     System.out.println(Arrays.toString(arr));
+     System.out.println(Arrays.toString(e.exchangeAB(arr)));
+    
+     
+	}
+    public int[] exchangeAB(int[] AB){
+    	List<Integer> list = new ArrayList<Integer>();
+    	list.add(0, AB[1]);
+    	list.add(1, AB[0]);
+    	
+    	int[] array = new int[list.size()];
+    	for(int i = 0;i < list.size();i++){
+    		array[i] = list.get(i);
+    		
+    	}
+    	return array;
+    	
+    }
+   
+}
