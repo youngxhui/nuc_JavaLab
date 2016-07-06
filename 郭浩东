@@ -1,0 +1,40 @@
+public class Text01 {
+	public boolean checkWon(int [][]board){
+		boolean win = false;
+		for(int i=0;i<board.length;i++){
+			for(int j=0;j<board.length;j++){
+				if(board[i][0]==1&&board[i][1]==1&&board[i][2]==1){
+					win= true;
+
+				}
+				else if(board[0][j]==1&&board[1][j]==1&&board[2][j]==1){
+					win= true;
+				}
+				else if(board[0][0]==1&&board[1][1]==1&&board[2][2]==1){
+					win=  true;
+				}
+				else if(board[0][2]==1&&board[1][1]==1&&board[2][0]==1){
+					win= true;
+				}
+				else if(board[i][0]==-1&&board[i][1]==-1&&board[i][2]==-1){
+					win= true;
+
+				}
+				else if(board[0][j]==-1&&board[1][j]==-1&&board[2][j]==-1){
+					win= false;
+				}
+				else if(board[0][0]==-1&&board[1][1]==-1&&board[2][2]==-1){
+					win= false;
+				}
+				else if(board[0][2]==-1&&board[1][1]==-1&&board[2][0]==-1){
+					win=  false;
+				}
+			
+			}
+
+
+		}
+		return win;
+
+		}	
+	} 
