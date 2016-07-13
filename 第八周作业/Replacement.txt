@@ -1,0 +1,21 @@
+
+public class Replacement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Replacement r = new Replacement();
+        System.out.println(r.replaceSpace("Mr Jone Smith", 13));
+        
+	}
+    public String replaceSpace(String iniString,int len){
+    	if(len > 1000){
+    		return "长度超过了限定";
+    	}else{
+    		String str = iniString.replace(" ", "%20");
+    		return str;
+    		
+    	}
+
+    	
+    }
+}
