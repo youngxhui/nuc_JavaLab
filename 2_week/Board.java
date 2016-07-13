@@ -1,25 +1,25 @@
 /**
  * 
- * @author ³ÂÁ¸
+ * @author é™ˆç²®
  *
-²âÊÔÊı¾İ£º
+æµ‹è¯•æ•°æ®ï¼š
 
-ÊäÈë:
+è¾“å…¥:
 4 5
 0  1 -1  1 -1
 1 -1  1  1 -1
 0  0  0 -1  0
 0 -1  1 -1  0
-Êä³ö£ºfalse
+è¾“å‡ºï¼šfalse
 
-ÊäÈë:
+è¾“å…¥:
 5 5
 0  1 -1  1 -1
 1 -1  1 -1 -1
 0  0  0  1  0
 0 -1  1 -1  0
 0  1  0  0 -1
-Êä³ö£ºtrue
+è¾“å‡ºï¼štrue
  */
 import java.util.*;
 public class Board {
@@ -29,7 +29,7 @@ public class Board {
 		int row=board.length;
 		int col=board[0].length;
 		
-		for(int i=0;i<row;i++){//ÅĞ¶Ïºá
+		for(int i=0;i<row;i++){//åˆ¤æ–­æ¨ª
 			for(int j=1;j<col-1;j++){
 				if(board[i][j-1]+board[i][j]+board[i][j+1]==3){
 					return true;
@@ -39,7 +39,7 @@ public class Board {
 		
 		for(int j=0;j<col;j++){
 			for(int i=1;i<row-1;i++){
-				if(board[i-1][j]+board[i][j]+board[i+1][j]==3){//ÅĞ¶ÏÊú
+				if(board[i-1][j]+board[i][j]+board[i+1][j]==3){//åˆ¤æ–­ç«–
 					return true;
 				}
 			}
@@ -47,8 +47,8 @@ public class Board {
 		
 		for(int i=1;i<row-1;i++){
 			for(int j=1;j<col-1;j++){
-				boolean d3=board[i-1][j-1]+board[i][j]+board[i+1][j+1]==3;//ÓÒĞ±
-				boolean d4=board[i+1][j-1]+board[i][j]+board[i-1][j+1]==3;//×óĞ±
+				boolean d3=board[i-1][j-1]+board[i][j]+board[i+1][j+1]==3;//å³æ–œ
+				boolean d4=board[i+1][j-1]+board[i][j]+board[i-1][j+1]==3;//å·¦æ–œ
 				if(d3||d4){
 					return true;
 				}
