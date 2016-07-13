@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-//为了提高程序效率将不使用递归处理 
+//涓轰簡鎻愰珮绋嬪簭鏁堢巼灏嗕笉浣跨敤閫掑綊澶勭悊 
 long fib(int k)
 {
 	int i=0,j=1;
