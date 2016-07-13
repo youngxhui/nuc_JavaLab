@@ -32,15 +32,15 @@ public:
 			t=t->next;
 			delete p;
 #ifdef debug
-			cout<<"ÊÍ·Å"<<endl;
+			cout<<"é‡Šæ”¾"<<endl;
 #endif
 		}
 		delete head;
 #ifdef debug
-		cout<<"ÊÍ·Åhead"<<endl;
+		cout<<"é‡Šæ”¾head"<<endl;
 #endif
 	}
-	//Ìí¼ÓÔªËØ 
+	//æ·»åŠ å…ƒç´  
 	void add(int x)
 	{
 		Node* now=new Node();
@@ -61,7 +61,7 @@ public:
 			tail=now;
 		}
 	}
-	//µÃµ½µÚi¸öÔªËØ 
+	//å¾—åˆ°ç¬¬iä¸ªå…ƒç´  
 	int get(int i)
 	{
 		if(i>0&&i<=length)
@@ -78,12 +78,12 @@ public:
 			return 0;
 		}
 	}
-	//µÃµ½³¤¶È 
+	//å¾—åˆ°é•¿åº¦ 
 	int getLength()
 	{
 		return length;
 	}
-	//É¾³ýÖµµÈÓÚxµÄ½Úµã 
+	//åˆ é™¤å€¼ç­‰äºŽxçš„èŠ‚ç‚¹ 
 	void removeElements(int x)
 	{
 		Node* now=head->next;
@@ -94,7 +94,7 @@ public:
 				Node* tmp=now;
 				now=now->next;
 				tmp->prev->next=now;
-				//´Ë´¦Ó¦µ±×¢Òâ,ÒòÎªnow´ËÊ±¿ÉÄÜÎªNULL,¹ÊÓ¦µ±ÓÐ´ËÅÐ¶Ï 
+				//æ­¤å¤„åº”å½“æ³¨æ„,å› ä¸ºnowæ­¤æ—¶å¯èƒ½ä¸ºNULL,æ•…åº”å½“æœ‰æ­¤åˆ¤æ–­ 
 				if(now!=NULL)
 					now->prev=tmp->prev;
 				delete tmp;
@@ -124,7 +124,7 @@ int main()
 	}
 	cout<<"-----------------------------"<<endl;
 #endif
-	//Ö´ÐÐÉ¾³ý²Ù×÷,É¾³ýÖµÎª3µÄÔªËØ 
+	//æ‰§è¡Œåˆ é™¤æ“ä½œ,åˆ é™¤å€¼ä¸º3çš„å…ƒç´  
 	s.removeElements(3);
 	for(int i=1;i<=s.getLength();i++)
 	{
