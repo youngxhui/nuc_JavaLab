@@ -1,0 +1,46 @@
+public class AddSubstitution {
+	public static void main(String[] args) {
+		AddSubstitution a = new AddSubstitution();
+		System.out.println(a.calc(1, 2, 1));
+	}
+    public int  calc(int a,int b,int type){
+    	if(type == 1){   //|a|做|b|次连加
+    		int result = 0;
+    		if(Math.abs(a) > Math.abs(b))
+    			return calc(b,a,1);
+    		for(int i = 0;i < Math.abs(a);i++){
+    			 result = Math.abs(b);
+    		}
+    		if((a > 0 && b > 0) || (a < 0 && b < 0)){
+    			return result;
+    		}else{
+    			return -result;
+    		}
+    	}else if(type == 0){
+    		int res = 0;
+    		while(res != Math.abs(a)){
+    			res = Math.abs(b) + Math.abs(b);
+    		}
+    		if((a > 0 && b > 0) || (a < 0 && b < 0)){
+    			return res;
+    		}else{
+    			return -res;
+    		}
+    		
+    		
+    	}else if(type == -1){
+    		return a + negate(b);
+    	}else{
+    		return 0;
+    	}
+    }
+    public int negate(int b){
+    	int value = (b < 0 ? 1 : -1);
+    	int negate = 0;
+    	while(b != 0){
+    		negate += value;
+    		b += value;
+    	}
+    	return negate;
+    }
+}
