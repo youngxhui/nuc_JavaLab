@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+public class Count2
+{
+	public static void main(String[] args)
+	{
+		System.out.println("请输入要查找的数:");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println("2的个数为："+countNumberOf2s(n));
+		sc.close();
+	}
+	static int countNumberOf2s (int n)
+	{
+		int num = 0;
+		double p = 0;
+		int a = 0;
+		for(int i = 1; i <= n; i++)
+		{
+			
+			while (i>10)
+			{	a=i;
+				while(a>10)
+				{
+					p++;
+					a=a%10;
+				}
+				if(a==2) num++;
+				i=i-a*(int)java.lang.Math.pow(10, p);
+				p=0;
+			}
+			if (i==2) num++;
+		}
+		return num;
+	}
+}

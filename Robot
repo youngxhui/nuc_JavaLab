@@ -1,0 +1,18 @@
+/*内容参考自https://www.nowcoder.com/questionTerminal/e8bb8e68434e42acbcdff0341f2a32c5*/
+public class Robot
+{
+	public int countWays(int x, int y)
+	{
+		 int dp[][] = new int [13][13];//限定x+y <= 12
+	        dp[0][0] = 1;//也有设为0的
+	        for(int i = 1; i < y; i++)//第一行初始化，因为只有横着走一种方法。
+	             dp[0][i] = 1;
+	         for(int i = 1;i < x;i++)//第一列初始化，因为只有竖着一种方法。
+	            dp[i][0] = 1;
+	         for(int i = 1; i < x; i++)//dp[i][j]的方法，等于走到上面一格和走到左边一个方法之和。
+	              for(int j = 1; j < y; j++){
+	                  dp[i][j] = dp[i-1][j] + dp[i][j-1];
+	              }
+	         return dp[x-1][y-1]; 
+	}
+}
