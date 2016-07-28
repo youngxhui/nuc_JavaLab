@@ -1,4 +1,5 @@
-`#include<stdio.h>
+```c
+#include<stdio.h>
 int Sum_Solution(int n)
 {
 	int temp=0;
@@ -8,4 +9,5 @@ int Sum_Solution(int n)
 int main()
 {
 	printf("%d",Sum_Solution(2));
-}`
+}
+```
