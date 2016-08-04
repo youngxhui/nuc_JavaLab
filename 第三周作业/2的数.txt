@@ -1,0 +1,22 @@
+package github;
+/*
+ * 第四周作业:请编写一个方法，输出0到n(包括n)中数字2出现了几次。
+ * 给定一个正整数n，请返回0到n的数字中2出现了几次。
+*/
+public class findtwo {
+	public int countN(int n) {
+		int count = 0;
+		for (int j = 0; j <= n; j++) {
+			int i; 
+			String s = String.valueOf(j);
+			i = s.length() - 1;
+			for (; i >= 0; i--) {
+				char c = s.charAt(i);
+				if (c == '2') {
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+}
