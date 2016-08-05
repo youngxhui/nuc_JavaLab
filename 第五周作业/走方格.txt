@@ -1,0 +1,43 @@
+package github;
+    /*
+     *                            问题描述：
+   有一个XxY的网格，一个机器人只能走格点且只能向右或向下走，
+  要从左上角走到右下角。请设计一个算法，计算机器人有多少种走法。
+  给定两个正整数int x,int y表示网格的大小，计算机器人的走法数目。
+                                   求解思路：
+  对于本题，我们依然运用动态规划的思想。
+  对于网格中的每一个格子，若该格子位于第一行，则只能由左边的格子到达；
+  若格子位于第一列，只能由上面的格子到达；
+  网格中的其他格子可以由左边的格子到达，也可以由上面的格子到达。
+  因此到达每一个格子的方法数都由左边的或者上面的格子所决定。
+  我们依次从网格的左上角遍历到右下角，则到达右下角格子的方法数便是最终的结果了。
+     */
+	import java.util.Scanner;  
+	import java.util.Stack;  
+	public class walk_fangge {  
+	    public static void main(String[] args) {  
+	        Scanner sc=new Scanner(System.in);  
+	        int x=sc.nextInt();  
+	        int y=sc.nextInt();  
+	        if(x==0||y==0)   
+	            System.out.println(0);  
+	        else if(x==1||y==1)  
+	            System.out.println(1);  
+	        else{  
+	            int [][]f=new int[x][y];  
+	            for(int j=0;j<y;j++){  
+	                f[0][j]=1;  
+	            }  
+	            for(int i=0;i<x;i++){  
+	                f[i][0]=1;  
+	            }  
+	            for(int i=1;i<x;i++){  
+	                for(int j=1;j<y;j++){  
+	                    f[i][j]=f[i][j-1]+f[i-1][j];  
+	                }  
+	            }  
+	            System.out.println(f[x-1][y-1]);  
+	        }  
+	    }  
+	}  
+
