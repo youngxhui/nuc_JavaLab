@@ -1,0 +1,13 @@
+public class MaxGap1 {
+	public int BallWay(int a,int b,int c,int d){
+		int sum = 0;
+		for(int i=0;a<1&&b<1&&c<1&&d<1;){
+		    sum=sum+a+b+c+d;
+			a=a/2;
+			b=b/2;
+			c=c/2;
+			d=c/2;
+		}
+		return sum;
+	}
+}
