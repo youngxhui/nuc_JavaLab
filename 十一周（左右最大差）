@@ -1,0 +1,12 @@
+public class MaxGap {
+	public int findMaxGap(int[] A, int n) {
+		int max = 0;
+		for(int i=0;i<n;i++){
+			 max = max<A[i]?A[i]:max;
+		}
+		int a=Math.abs(max-A[0]);
+		int b=Math.abs(max-A[n]);
+		int c=Math.max(a, b);
+		return c;
+    }
+}
