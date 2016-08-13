@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Isbn{
+    public static void main(String[] args) {
+        long a, b, c, d, e, f, h, i, j;
+        int k;
+        Scanner sc = new Scanner(System.in);
+        String str;
+        str = sc.next();
+        long m = Integer.valueOf(str.substring(0, 11).replaceAll("-", ""));
+        int n = Integer.valueOf(str.substring(12, 13).replaceAll("-", ""));
+        a = m / 100000000;
+        b = m/ 10000000 % 10;
+        c = m / 1000000 % 10;
+        d = m / 100000 % 10;
+        e = m / 10000 % 10;
+        f = m / 1000 % 10;
+        h = m / 100 % 10;
+        i = m / 10 % 10;
+        j = m % 10;
+        k = (int) (a * 1 + b * 2 + c * 3 + d * 4 + e * 5 + f * 6 + h * 7 + i * 8 + j * 9) % 11;
+        if (k == n) {
+            System.out.println("Right");
+        } else {
+            if (k == 10) {
+                System.out.println(a + "-" + b + c + d + "-" + e + f + h + i + j + "-" + "X");
+            } else {
+                System.out.println(a + "-" + b + c + d + "-" + e + f + h + i + j + "-" + k);
+              }
+         }
+    }  
+}
