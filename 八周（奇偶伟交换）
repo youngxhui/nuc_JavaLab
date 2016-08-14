@@ -1,0 +1,7 @@
+public class exchangeOddEven {
+	 public int exchangeOddEven(int x) {
+	        int y;
+	        y=x>>1;
+	        return y;
+	    }
+}
