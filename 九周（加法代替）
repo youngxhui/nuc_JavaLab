@@ -1,0 +1,19 @@
+public class AddSubstitution {
+	 public int calc(int a, int b, int type) {
+		 int sum=0;
+		 if(type==1){
+			 for(int i=0;i<b;i++){
+				 sum=sum+a;
+			 }
+		 }
+		 if(type==0){
+			 while(sum<=a){
+				 sum=sum+b;
+			 }
+		 }
+		 if(type==-1){
+			 sum=a+(-b);
+		 }
+		 return sum;
+	 }
+}
