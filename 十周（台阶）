@@ -1,0 +1,15 @@
+public class Solution {
+	public int JumpFloorII(int target) {
+		int c = 0;
+		if(target==0){
+			c=0;
+		}
+		if(target==1){
+			c=1;
+		}
+		if(target>=2){
+			c=JumpFloorII(target-1);
+		}
+		return c;
+    }
+}
