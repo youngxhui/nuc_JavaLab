@@ -8,7 +8,7 @@ public class Solution {
 			c=1;
 		}
 		if(target>=2){
-			c=JumpFloorII(target-1);
+			c=2*JumpFloorII(target-1);
 		}
 		return c;
     }
