@@ -8,8 +8,9 @@ public class Sum {
 			sum=1;
 		}
 		if(n>=2){
-			sum=Sum_Solution(n-1);
+			sum=n+Sum_Solution(n-1);
 		}
 		return sum;
     }
+	
 }
