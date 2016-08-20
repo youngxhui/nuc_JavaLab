@@ -1,0 +1,13 @@
+public int contributor(int i, int [] x)
+{
+  int u=0;
+    for(int p =0;p<i;p++)
+      {
+          for(int w =p;w<i;w++)
+          {
+              if(((x[p]-x[w])==1)||((x[p]-x[w])==-1))
+                u++;
+            }
+        }
+}
+              
