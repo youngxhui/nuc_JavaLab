@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Area {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+         Scanner s = new Scanner(System.in);
+         System.out.println("请输入所要输入的矩形个数的总数：");
+         int a = s.nextInt();
+         int x1,y1,x2,y2;
+         int[][] b = new int[a][4];
+         int[][] c = new int[100][100];
+         for(int i = 0;i < b.length;i++){
+        	 for(int j = 0;j < 4;j++){
+        		 b[i][j] = s.nextInt();
+        	 }
+        	 x1 = b[i][0];
+        	 y1 = b[i][1];
+        	 x2 = b[i][2];
+        	 y2 = b[i][3];
+        	 for(int x = x1;x < x2;x++){
+        		 for(int y = y1;y < y2;y++){
+        			 c[x][y] = 1;
+        			 
+        		 }
+        		 
+        	 }
+        	 
+         }
+         int sum = 0;
+         for(int i = 0;i < c.length;i++){
+        	 for(int j = 0;j < c.length;j++){
+        		 if(c[i][j] == 1)
+        			 sum++;
+        		 
+        	 }
+         }
+         System.out.println("所涂的面积总数为：" + sum);
+         s.close();
+	}
