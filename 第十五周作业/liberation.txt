@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class liberate {
+      public static void main(String[] args) {
+		  Scanner s = new Scanner(System.in);
+		  System.out.println("请输入记录条数：");
+		  int a = s.nextInt();
+    	  int[] b = new int[a];
+    	  int[] c = new int[a];
+    	  int sum = 1;
+    	  System.out.println("输入每位到访的记录：");
+    	  for(int i = 0;i < b.length ;i++){
+    		  b[i] = s.nextInt();
+    	  }
+    	  for(int i = 4;i >= 0;i--){
+    		  for(int j = i - 1;j >= 0;j--){
+    			  if(b[i] == b[j]){
+    				 sum ++; 
+    				 
+    			  }
+    		  }
+    		  c[i] = sum;
+    		  sum = 1;
+    		  
+    	  }
+    	  for(int i = 0;i < c.length;i++){
+    		  System.out.print(c[i] + " ");
+    		  
+    	  }
+    	  s.close();
+		
+	}
+}
