@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Book {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int[] b=new int[a];
+		int[] c=new int[a];
+		int sum=1;
+		for(int i=0;i<a;i++){
+			b[i]=sc.nextInt();
+		}
+		for(int i=a-1;i>=0;i--){
+			for(int j=i-1;j>=0;j--){
+				if(b[i]==b[j]){
+					sum++;
+				}
+			}
+			c[i]=sum;
+			sum=1;
+		}
+		for(int i=0;i<a;i++){
+			System.out.print(c[i]+" ");;
+		}
+	}
+}
