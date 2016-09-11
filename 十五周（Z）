@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class Zigzag {
+      public static final int RIGHT = 1;
+      public static final int DOWN = 2;
+      public static final int LEFTDOWN = 3;
+      public static final int RIGHTUP = 4;
+      public static int data[][];
+      public static void main(String[] args) {
+		new Zigzag().run();
+      }
+      public  void run(){
+    	  Scanner s = new Scanner(System.in);
+    	  int a = s.nextInt();
+    	  data = new int[a][a];
+    	  for(int i = 0;i < a;i++){
+    		  for(int j = 0;j < a;j++){
+    			  data[i][j] = s.nextInt();
+    		  }
+    	  }
+    	  int x = 0;
+    	  int y = 0;
+    	  String r = data[y][x] + " ";
+    	  int d = 0;
+    	  while(!(x == a - 1 && y == a - 1)){
+    		  if(d == 0){
+    			  d = RIGHT;
+    		  }else if(d == RIGHT){
+    			  if(x - 1 >= 0 && y + 1 < a){
+    				  d = LEFTDOWN;
+    			  }else{
+    				  d = RIGHTUP;
+    			  }
+    		  }else if(d == DOWN){
+    			  if(x -1 >= 0 && y + 1 < a){
+    				  d = LEFTDOWN;
+    			  }else{
+    				  d = RIGHTUP;
+    			  }
+    		  }else if(d == LEFTDOWN){
+    			  if(x - 1 >= 0 && y + 1 < a){
+    				  d = LEFTDOWN;
+    			  }else if(y + 1 < a){
+    				  d = DOWN;
+    			  }else{
+    				 d = RIGHT;
+    			  }
+    		  }else if(d == RIGHTUP){
+    			  if(y - 1 >= 0 && x + 1 < a){
+    				  d = RIGHTUP;
+    			  }else if(x + 1 < a)
+    				  d = RIGHT;
+    			  else
+    				  d = DOWN;
+    		  }
+    		  switch(d){
+    		  case RIGHT: x = x + 1;break;
+    		  case DOWN : y = y + 1;break;
+    		  case LEFTDOWN : x = x - 1; y = y + 1;break;
+    		  case RIGHTUP : x = x + 1;y = y - 1;break;
+    		  }
+    		  r += data[y][x] + " "; 
+    	  }
+    	  System.out.println(r);
+      }
+}
