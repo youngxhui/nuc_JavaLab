@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Rotate {
+public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);
+	System.out.println("请输入行数和列数:");
+	int row = s.nextInt();//行
+	int col = s.nextInt();//列
+	int[][] array = new int[row][col];
+	System.out.println("请输入矩阵中的数字:");
+	
+	for(int i = 0;i < row;i++){
+		for(int j = 0;j < col;j++){
+			array[i][j] = s.nextInt();
+		}
+	}
+	int[][] change = new int[col][row];
+	int a = col - 1; 
+	for(int i = 0;i < col;i++){
+		for(int j = 0;j < row;j++){
+			change[i][j] = array[j][a];
+		}
+		a--;
+
+		
+	}
+	
+	for(int i = 0;i < col;i++){
+		for(int j = 0;j < row;j++){
+			System.out.print(change[i][j] + " ");
+		}
+		System.out.println();
+	}
+	
+	s.close();
+	
+}
+}
