@@ -1,0 +1,7 @@
+P       P->next
+     S
+
+s ->prior = p;
+p->next ->prior = s;
+s->next = p->next;
+p->next = s;//зЂвтЫГађ
