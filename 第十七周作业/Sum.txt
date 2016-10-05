@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Sum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner s = new Scanner(System.in);
+    System.out.println("请输入十进制整数:");
+    int a = s.nextInt();
+    int sum = 0;
+    do{
+    	sum = sum + a % 10;
+    	a = a / 10;
+    }while(a != 0);
+    
+    System.out.println("输出各位数字之和:" + sum);
+    
+    s.close();
+	}
+
+}
