@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Part {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner s = new Scanner(System.in);
+    System.out.println("请输入整数的总数:");
+    int sum = s.nextInt();
+    int[] a = new int[sum];
+    System.out.println("请输入各个整数:");
+    for(int i = 0;i < a.length;i++){
+    	a[i] = s.nextInt();
+    }
+    int b = 1;
+    for(int j = 0;j < sum - 1;j++){
+    	if(a[j] != a[j + 1]){
+    		b++;
+    	}
+    }
+    System.out.println(b);
+
+    s.close();
+	}
+
+}
