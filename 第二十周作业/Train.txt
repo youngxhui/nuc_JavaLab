@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Train {
+
+	public static void main(String[] args) {
+ 		// TODO Auto-generated method stub
+     Scanner s = new Scanner(System.in);
+     System.out.println("请输入购票指令的数量:");
+     int a = s.nextInt();
+     int[] b = new int[a];
+     int[][] c = new int[20][5];
+     int num = 1;
+     for(int i = 0;i < b.length;i++){
+    	 b[i] = s.nextInt();
+     }
+    	 
+     for(int i = 0;i < 20;i++){
+    	 for(int j = 0;j < 5;j++){
+    		 c[i][j] = num;
+    		 num++;
+    	 }
+     }
+     for(int i = 0;i < b[0];i++){
+    	 System.out.print(c[0][i] + " ");
+     }
+     System.out.println();
+     for(int i = 0;i < 3;i++){
+    	 if(b[i + 1] > b[0]){
+    		 for(int j = 0;j < b[i + 1];j++){
+    			 System.out.print(c[i + 1][j] + " ");
+    		 }
+    		 System.out.println();
+    	 }else{
+    		 for(int z = b[0];z < b[i + 1] + b[0];z++){
+    			 System.out.print(c[0][z] + " ");
+    		 }
+    		 System.out.println();
+    	 }
+    	 
+     }
+	
+	
+	
+	s.close();
+	
+	}
+
+}
