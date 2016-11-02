@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Wave {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner s = new Scanner(System.in);
+    System.out.println("请输入一共的天数");
+    int day = s.nextInt();
+    int[] a = new int[day];
+    int[] b = new int[day];
+    int c = 0;
+    
+    for(int i = 0;i < a.length;i++){
+    	a[i] = s.nextInt();
+    }
+    for(int i = 0;i < a.length - 1;i++){
+    	c = Math.abs(a[i + 1] - a[i]);
+    	b[i] = c;
+    	c = 0;
+    }
+//    for(int i = 0;i < b.length;i++){
+//    	System.out.print(b[i] + " ");
+//    }
+    int max = b[0];
+    for(int i = 1;i < b.length;i++){
+    	
+    	if(b[i] > max){
+    		max = b[i];
+    	}
+    }
+    System.out.println("波动最大值为：" + max);
+    
+    
+    
+    
+    s.close();
+	}
+
+}
