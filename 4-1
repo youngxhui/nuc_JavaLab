@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Count2 {
+    public int countNumberOf2s(int n) {
+	int x=0;
+	for(;n>0;)
+	{
+		if(n%10==2)
+		{
+			x++;
+		}
+		n/=10;
+	}
+	return x;
+    }
+
+}
