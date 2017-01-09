@@ -1,0 +1,56 @@
+public class ListNote {
+	 private  ListNote NextNote;
+	    private int value;
+	    public ListNote(){  
+	    }
+	    public ListNote(int value){
+	        this.value=value;
+	    }  
+	    public  ListNote getNext(){     
+	        return NextNote;            
+	    }
+	    public void setNext(ListNote next){
+	        this.NextNote=next; 
+	    }   
+	    public int getValue(){
+	        return value;   
+	    }
+	    public void setValue(int value){
+	        this.value=value;
+	    }
+
+public static void deleteDuplication(ListNote root){
+        if(root==null){
+            return;
+        }
+        ListNote preNode=null;//前结点
+        ListNote node=root;//当前结点
+        while(node!=null){
+            ListNote nextNode=node.getNext();//下一个结点
+            boolean needDelete=false;
+//判断当前结点和下一个结点值是否相等 
+    if(nextNode!=null&&nextNode.getValue()==node.getValue())
+                needDelete=true;
+          if(!needDelete){//不相等，向前移动
+              preNode=node;
+              node=node.getNext();            
+          }
+          else{//相等，删除该结点
+              int value=node.getValue();
+              ListNote toBeDel=node;
+              while(toBeDel!=null&&toBeDel.getValue()==value){
+                  nextNode=toBeDel.getNext();//删除该结点
+                  toBeDel=nextNode;
+              }  
+              if(preNode==null){//头结点删除时
+                  root=nextNode;
+              }
+              else{
+                  //即删除了重复结点
+                  preNode.setNext(nextNode);
+              }
+              node=nextNode;
+          }
+        }
+}
+}

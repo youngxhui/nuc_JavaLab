@@ -1,0 +1,42 @@
+public class Board {
+	public int gameState(JButton[]jb){
+		int result =1;
+		boolean isFull=true;
+		// 判断棋盘是否已满 
+		
+		for(int pos=0;pos<9;pos++){
+		charchess=jb[pos].getText().charAt(0);
+		if (empty == chess) {     isFull = false;
+		
+		return result;
+		
+		}
+		
+		
+
+		for(int[]status:WIN_STATUS){
+		//遍历8中棋局获胜状态
+		char chess=jb[status[0]].getText().charAt(0);
+		if(chess==empty){
+		continue;}
+	     int i;
+		for(i=1;i<status.length;i++){
+
+          if(jb[status[i]].getText().charAt(0)!=chess){
+
+            break;
+
+           }
+}
+
+		if(i==status.length){
+			result=chess=='0'?WIN:LOSE;
+			break;
+		}
+		}
+		if(result!=WIN&result!=LOSE&idFULT){
+			result=DRAW;
+			return result;
+		}
+
+	}
