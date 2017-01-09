@@ -1,0 +1,48 @@
+public class Board {
+	
+	public boolean checkWon(int board[][]){
+		boolean a =true;
+		for(int i=0;i<board.length;i++){
+			for(int j=0;j<board.length;j++){
+				if(board[i][j]==1){
+					a=true;
+				}
+				if(board[i][j]==-1){
+					a=false;
+				}
+			}
+		}
+		for(int i=0;i<board.length;i++){
+			for(int j=0;j<board.length;j++){
+				if(board[j][i]==1){
+					a=true;
+				}
+				if(board[j][i]==-1){
+					a=false;
+				}
+			}
+		}
+		return a;
+	}
+}
+public class BoardTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Board b=new Board();
+		int s[][] = new int[3][];
+		s[0]=new int[3];
+		s[0][0]=1;
+		s[0][1]=0;
+		s[0][2]=1;
+		s[1]=new int[3];
+		s[1][0]=1;
+		s[1][1]=-1;
+		s[1][2]=1;
+		s[2]=new int[3];
+		s[2][0]=1;
+		s[2][1]=-1;
+		s[2][2]=0;
+		System.out.println(b.checkWon(s));
+	}
+}

@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Number {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int m=sc.nextInt();
+		int sum = 0;
+		int a[]=new int [m];
+		int b[]=new int [m];
+		int c[]=new int [m];
+		int d[]=new int [m];
+		for(int i=0;i<m;i++){
+			a[i]=sc.nextInt();
+		}
+		for(int i=1;i<m;i++){
+			for(int j=0;j<m-i;j++){
+				if(a[i]==a[0]){
+					sum++;
+				}
+				b[i-1]=sum;
+			}
+			sum=0;
+		}
+		for(int i=1;i<m;i++){
+			for(int j=0;j<m-i;j++){
+				if(b[j+1]>b[j]){
+					int n;
+					int x;
+					n=b[j];
+					x=a[j];
+					b[j]=b[j+1];
+					a[j]=a[j+1];
+					a[j+1]=x;
+					b[j+1]=n;
+				}
+			}
+		}
+		for(int i=1;i<m;i++){
+			for(int j=0;j<m-i;j++){
+				if(a[j]!=a[j+1]){
+					c[j]=a[j+1];
+					d[j]=b[j+1];
+				}
+			}
+		}
+		for(int i=0;i<c.length;i++){
+			System.out.println(c[i]+" "+d[i]);
+		}
+	}
+}

@@ -1,0 +1,104 @@
+public class Main {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Scanner sc=new Scanner(System.in);
+        long a=sc.nextLong();
+        if(a<0||a>1000000000){
+        	System.out.println("Error");
+        }
+        else{
+        	if(a>0&&a<9){
+        		System.out.println(a);
+        	}
+        	else{
+        		if(a>=10&&a<100){
+        			long b=(a/10);
+        			long c=a%10;
+        			System.out.println(b+c);
+        		}
+        		else{
+        			if(a>=100&&a<1000){
+        				long d=a/100;
+        				long e=a%100/10;
+        				long f=a%100%10;
+        				System.out.println(d+e+f);
+        			}
+        			else{
+        				if(a>=1000&&a<10000){
+        					long g=a/1000;
+        					long h=a%1000/100;
+        					long i=a%1000%100/10;
+        					long k=a%1000%100%10;
+        					System.out.println(g+h+i+k);
+        				}
+        				else{
+        					if(a>=10000&&a<100000){
+        						long l=a/10000;
+        						long m=a%10000/1000;
+        						long n=a%10000%1000/100;
+        						long o=a%10000%1000%100/10;
+        						long p=a%10000%1000%100%10;
+        						System.out.println(l+m+n+o+p);
+        					}
+        					else{
+        						if(a>=100000&&a<1000000){
+        							long r=a/100000;
+        							long s=a%100000/10000;
+        							long t=a%100000%10000/1000;
+        							long u=a%100000%10000%1000/100;
+        							long v=a%100000%10000%1000%100/10;
+        							long w=a%100000%10000%1000%100%10;
+        							System.out.println(r+s+t+u+v+w);
+        						}
+        						else{
+        							if(a>=1000000&&a<10000000){
+        								long x=a/1000000;
+            							long y=a%1000000/100000;
+            							long z=a%1000000%100000/10000;
+            							long b=a%1000000%100000%10000/1000;
+            							long c=a%1000000%100000%10000%1000/100;
+            							long d=a%1000000%100000%10000%1000%100/10;
+            							long e=a%1000000%100000%10000%1000%100%10;
+            							System.out.println(x+y+z+b+c+d+e);
+        							}
+        							else{
+        								if(a>=10000000&&a<100000000){
+        									long x=a/10000000;
+                							long y=a%10000000/1000000;
+                							long z=a%10000000%1000000/100000;
+                							long b=a%10000000%1000000%100000/10000;
+                							long c=a%10000000%1000000%100000%10000/1000;
+                							long d=a%10000000%1000000%100000%10000%1000/100;
+                							long e=a%10000000%1000000%100000%10000%1000%100/10;
+                							long f=a%10000000%1000000%100000%10000%1000%100%10;
+                							System.out.println(x+y+z+b+c+d+e+f);
+        								}
+        								else{
+        									if(a>=100000000&&a<1000000000){
+        										long x=a/100000000;
+                    							long y=a%100000000/10000000;
+                    							long z=a%100000000%10000000/1000000;
+                    							long b=a%100000000%10000000%1000000/100000;
+                    							long c=a%100000000%10000000%1000000%100000/10000;
+                    							long d=a%100000000%10000000%1000000%100000%10000/1000;
+                    							long e=a%100000000%10000000%1000000%100000%10000%1000/100;
+                    							long f=a%100000000%10000000%1000000%100000%10000%1000%100/10;
+                    							long g=a%100000000%10000000%1000000%100000%10000%1000%100%10;
+                    							System.out.println(x+y+z+b+c+d+e+f+g);
+        									}
+        									else{
+        										if(a==1000000000){
+        											System.out.println("1");
+        										}
+        									}
+        								}
+        							}
+        						}
+        					}
+        				}
+        			}
+        		}
+        	}
+        }
+	}
+}
