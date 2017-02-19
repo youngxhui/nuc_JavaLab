@@ -1,4 +1,6 @@
 # nuc_JavaLab
+[![star this repo](http://github-svg-buttons.herokuapp.com/star.svg?user=youngxhui&repo=nuc_JavaLab&style=flat&background=1081C1)](http://github.com/youngxhui/nuc_JavaLab)  [![fork this repo](http://github-svg-buttons.herokuapp.com/fork.svg?user=youngxhui&repo=nuc_JavaLab&style=flat&background=1081C1)](http://github.com/youngxhui/nuc_JavaLab/fork)
+
 某著名高校的某强大实验室
 
 # 新的试题
