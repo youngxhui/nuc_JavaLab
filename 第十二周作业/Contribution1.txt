@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Contributor1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      Scanner s = new Scanner(System.in);
+      System.out.println("请输入图书的九位ISBN号码：");
+      String str = s.nextLine();
+      String str1 = String.valueOf(str.substring(0, str.length()).replaceAll("-", ""));
+      int sum = 0;
+      int[] arr = new int[str1.length()];
+
+      for(int i = 0;i < str1.length();i++){
+    	  String str2 = str1.substring(i, i + 1);
+    	  arr[i] = Integer.parseInt(str2);
+    	 
+      }
+      for(int i = 0;i < str1.length() - 1;i++){
+    	  sum += (arr[i] * (i + 1));
+      }
+//      System.out.println(sum);
+      int recognition = sum % 11;
+//      System.out.println(recognition);
+      if(recognition == arr[arr.length - 1]){
+    	  System.out.println("Right");
+      }else{
+    	  arr[arr.length - 1] = recognition;
+    	  for(int i = 0;i < arr.length - 1;i++){
+    		  if(i == 1 || i == 4){
+    			  System.out.print("-");
+    		  }
+    		  System.out.print(arr[i]);
+    	  }
+    	  System.out.print("-" + recognition);
+    	  
+      }
+      s.close();
+	}
+
+}

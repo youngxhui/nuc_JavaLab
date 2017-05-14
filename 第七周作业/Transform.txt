@@ -1,0 +1,37 @@
+public class Transform {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Transform t = new Transform();
+    int result = t.calcCost(10, 5);
+    System.out.println(result);
+    
+	}
+    public int calcCost(int A,int B){
+    	//默认a的长度大于b的长度
+    	int sum = 0;
+    	String a = Integer.toBinaryString(A);
+    	String b = Integer.toBinaryString(B);
+    	
+    	if(a.length() < b.length()){
+    		String temp = a;
+    		    a = b;
+    		    b = temp;
+    	}
+    	for(int i = 0;i < a.length() - b.length();i++){
+    		b = "0" + b;
+    	}
+    	
+    	char[] cA = a.toCharArray();
+    	char[] cB = b.toCharArray();
+    	
+    	for(int j = 0;j < a.length();j++){
+    		if(cA[j] != cB[j]){
+    			sum++;
+    		}
+    		
+    	}
+    	
+    	return sum;
+    }
+}

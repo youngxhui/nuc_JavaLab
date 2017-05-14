@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Much {
+public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);
+	System.out.println(请输入所要的所有整数个数：);
+	int sum = s.nextInt();
+	int[] array = new int[sum];
+    
+	System.out.println(请输入所有整数);
+	for(int i = 0;i  array.length;i++){
+		array[i] = s.nextInt();
+	}
+	
+	MapInteger,Integer map = new HashMapInteger,Integer();
+	for(int a  array){
+		Integer b = map.get(a);
+		if(b == null){
+			map.put(a, 1);
+		}else{
+			map.put(a, ++b);
+		}
+		
+	}
+	ListMap.EntryInteger,Integer list = new ArrayListMap.EntryInteger,Integer(map.entrySet());
+	Collections.sort(list, new ComparatorMap.EntryInteger,Integer(){
+
+		@Override
+		public int compare(Map.EntryInteger, Integer o1, Map.EntryInteger, Integer o2) {
+			 TODO Auto-generated method stub
+			return ((Integer)o2.getValue()).compareTo((Integer)o1.getValue());
+		}
+		
+	});
+	IteratorMap.EntryInteger, Integer iterator = list.iterator();
+	while(iterator.hasNext()){
+		System.out.println(iterator.next().toString().replace(=,  ));
+		
+	}
+	
+	
+	s.close();
+	
+}
+}

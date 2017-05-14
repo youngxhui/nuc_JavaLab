@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Difference {
+   public static void main(String[] args) {
+	   Scanner s = new Scanner(System.in);
+	   System.out.println("请输入所要判断的整数总数：");
+	   int a = s.nextInt();
+	   int[] b = new int[a];
+	   System.out.println("请输入所要输入的整数:");
+	   for(int i = 0;i < a;i++){
+		   b[i] = s.nextInt();
+	   }
+	   int sum = 0;
+	   
+	   for(int i = 0;i < a;i++){
+		   for(int j = i;j < a;j++){
+			  if(b[i] - b[j] == 1)
+				  sum++;
+			  else if(b[j] - b[i] == 1)
+				  sum++;
+			   
+		   }
+		   
+	   }
+	   System.out.println("两个数相差1的总数为：" + sum);
+	   s.close();
+	   
+}
+}

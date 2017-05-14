@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Year {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner s = new Scanner(System.in);
+    System.out.println("请输入年份:");
+    int year = s.nextInt();
+    System.out.println("请输入第几天:");
+    int day = s.nextInt();
+    
+    int sum  = 0;
+    if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+    	int a = day / 30 + 1;
+    	switch(a){
+    	case 1 : sum = 0;break;
+    	case 2 : sum = 31;break;
+    	case 3 : sum = 60;break;
+    	case 4 : sum = 91;break;
+    	case 5 : sum = 121;break;
+    	case 6 : sum = 152;break;
+    	case 7 : sum = 182;break;
+    	case 8 : sum = 213;break;
+    	case 9 : sum = 244;break;
+    	case 10 : sum = 274;break;
+    	case 11 : sum = 305;break;
+    	case 12 : sum = 335;break;
+    	default : break;
+    	}
+    	int b = day - sum;
+    	
+    	System.out.println(a + "月");
+    	System.out.println(b + "日");
+    }else{
+    	int a = day / 30 + 1;
+    	
+    	switch(a){
+    	case 1 : sum = 0;break;
+    	case 2 : sum = 31;break;
+    	case 3 : sum = 59;break;
+    	case 4 : sum = 90;break;
+    	case 5 : sum = 120;break;
+    	case 6 : sum = 151;break;
+    	case 7 : sum = 181;break;
+    	case 8 : sum = 212;break;
+    	case 9 : sum = 243;break;
+    	case 10 : sum = 273;break;
+    	case 11 : sum = 304;break;
+    	case 12 : sum = 334;break;
+    	default : break;
+    	}
+    	int b = day - sum;
+
+    	System.out.println(a + "月");
+    	System.out.println(b + "日");
+    }
+    
+    
+    
+    
+    s.close();
+	}
+
+}

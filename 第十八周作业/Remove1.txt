@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Remove1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner s = new Scanner(System.in);
+    System.out.println("请输入行数和列数:");
+    int row = s.nextInt();
+    int col = s.nextInt();
+    int[][] a = new int[row][col];
+    int[][] b = new int[row][col];
+    System.out.println("请输入各个位置的颜色:");
+    for(int i = 0;i < row;i++){
+    	for(int j = 0;j < col;j++){
+    		b[i][j] = s.nextInt();
+    		a[i][j] = b[i][j];
+    
+    	}
+    	
+    }
+    
+    
+    for(int i = 0;i < row;i++){
+    	for(int j = 0;j < col;j++){
+    		if(j + 2 < col){
+    			if(a[i][j] == a[i][j + 1] && a[i][j + 1] == a[i][j + 2]){
+    				a[i][j] = 0;
+    				a[i][j + 1] = 0;
+    				a[i][j + 2] = 0;
+    			}
+    		}
+    		if(i + 2 < row){
+    			if(a[i][j] == a[i + 1][j] && a[i + 1][j] == a[i + 2][j]){
+    				a[i][j] = 0;
+    				a[i + 1][j] = 0;
+    				a[i + 2][j] = 0;
+    			}
+    		}
+    	}
+    }
+    for(int i = 0;i < row;i++){
+    	for(int j = 0;j < col;j++){
+    		System.out.print(a[i][j] + " ");
+    	}
+    	System.out.println();
+    }
+    
+    
+    
+    
+    s.close();
+	}
+}

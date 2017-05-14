@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Big {
+public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);
+	int a = s.nextInt();
+	int[] b = new int[a];
+	
+	
+	int summ = 0;
+	int index = 0;
+	for(int i = 0;i < b.length;i++){
+		b[i] = s.nextInt();
+	}
+	
+	for(int i = 0;i < b.length;i++){
+		int sum = 0;
+		for(int j = i + 1;j < b.length;j++){
+			if(b[i] == b[j]){
+				sum++;
+			}
+			
+		}
+		if(summ < sum){
+			summ = sum;
+		    index = i;
+		}
+	}
+	System.out.println(b[index]);
+	s.close();
+}
+}

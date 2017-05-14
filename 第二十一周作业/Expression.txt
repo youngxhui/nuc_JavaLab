@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Expression {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner s = new Scanner(System.in);
+   System.out.println("请输入相应的数：");
+    String[] str = new String[3];
+   for(int i = 0;i < str.length;i++){
+	   str[i] = s.next();
+   }
+	Method method = new Method();
+    System.out.println(method.express(str[0], str[1], str[2]));
+    s.close();
+	}
+
+}
+class Method{
+	
+	public int express(String str,String a,String b){
+		
+		if(str.equals("+")){
+			return Integer.parseInt(a) + Integer.parseInt(b);
+		}else if(str.equals("-")){
+			return Integer.parseInt(a) - Integer.parseInt(b);
+		}else if(str.equals("*")){
+			return Integer.parseInt(a) * Integer.parseInt(b);
+		}else if(str.equals("/")){
+			return Integer.parseInt(a) / Integer.parseInt(b);
+		}
+		return 0;
+	}
+	
+}

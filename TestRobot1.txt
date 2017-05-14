@@ -1,0 +1,31 @@
+public class TestRobot1 {
+     public static void main(String[] args) {
+	Robot r = new Robot();
+	System.out.println(r.countWays(2, 2));
+}
+}
+class Robot{
+	public int countWays(int x,int y){
+		int[][] array = new int[x][y];
+		if(x == 0 || y == 0){
+			return 0;
+		}else if(x == 1 || y == 1){
+			return 1;
+		}else{
+			
+			for(int j = 0;j < y;j++){
+				array[0][j] = 1;
+			}
+			for(int i = 0;i < x;i++){
+				array[i][0] = 1;
+			}
+			for(int i = 1;i < x;i++){
+				for(int j = 1;j < y;j++){
+					array[i][j] = array[i][j - 1] + array[i-1][j];
+					
+				}
+			} 
+		}
+		return array[x - 1][y - 1];
+	}
+}

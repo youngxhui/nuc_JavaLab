@@ -1,0 +1,21 @@
+import java.math.BigInteger;
+
+public class UnusualAdd {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Add add = new Add();
+		System.out.println(add.addAB(1, 2));
+	}
+
+}
+class Add{
+	public int addAB(int A,int B){
+		BigInteger a = BigInteger.valueOf(A);
+		BigInteger b = BigInteger.valueOf(B);
+		BigInteger c = a.add(b);
+		int d = c.intValue();
+		return d;
+	}
+}

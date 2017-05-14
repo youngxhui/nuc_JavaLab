@@ -1,0 +1,37 @@
+﻿import java.util.Scanner;
+
+public class Fb {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Scanner s = new Scanner(System.in);
+        Solution sl = new Solution();
+		System.out.println("请输入你要查看第几个数");
+		int a = s.nextInt();
+        int fib = sl.fibonacci(a);
+        System.out.println("第" + a + "个数的值为：" + fib);
+        
+		s.close();
+      
+	}
+
+}
+class Solution{
+	int sum = 0;
+	int a1 = 0;
+	int a2 = 1;
+	public int fibonacci(int n){
+		if(n == 1){
+			return a1;
+		}else if(n == 2){
+			return a2;
+		}else{
+			for(int i = 3;i <= n;i++){
+				sum = a1 + a2;
+				a1 = a2;
+				a2 = sum;
+			}
+			return sum;
+		}
+	}
+}

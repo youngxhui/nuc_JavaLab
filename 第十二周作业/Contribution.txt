@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Contributor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Scanner s = new Scanner(System.in);
+        
+		System.out.println("请输入出现数字的个数：");
+		int a = s.nextInt();
+		int[] b = new int[a];
+		System.out.println("请输入出现的数字：");
+		for(int i = 0;i < a;i++){
+			b[i] = s.nextInt();
+		}
+		int[] c = new int[10000]; //存放每个数出现的次数
+		int[] e = new int[10000]; //存放出现次数最多且次数一样的几个数
+		
+		for(int i = 0;i < 10000;i++){
+			e[i] = 0;
+		}
+		for(int i = 0;i < 10000;i++){
+			c[i] = 1;
+		}
+		for(int i = 0;i < a;i++){
+			for(int j = i + 1;j < a;j++){
+		         if(b[i] == b[j]){
+		        	 c[i] += 1;
+		         }
+			}
+			
+		}
+		
+		
+		int max = c[0];
+		for(int i = 1;i < a;i++){
+			if(c[i] > max)
+				max = c[i];
+			
+		}
+		int aa = 0;
+		for(int i = 0;i < a;i++){
+			if(c[i] == max){
+				e[aa] = b[i];
+				aa++;
+			}
+		}
+		int min = e[0];
+		for(int i = 1;i < a;i++){
+			if(e[i] < min && e[i] != 0){
+				min = e[i];
+			}
+		}
+		System.out.println("出现次数最多且数最小的数为：" + min);
+        s.close();
+	}
+
+}

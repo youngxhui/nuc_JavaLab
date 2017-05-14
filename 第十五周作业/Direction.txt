@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+public class Direction {
+      public static final int RIGHT = 1;
+      public static final int DOWN = 2;
+      public static final int LEFTDOWN = 3;
+      public static final int RIGHTUP = 4;
+      public static int data[][];
+      
+      public static void main(String[] args) {
+		new Direction().run();
+	}
+      public  void run(){
+    	  Scanner s = new Scanner(System.in);
+    	  int a = s.nextInt();
+    	  data = new int[a][a];
+    	  
+    	  for(int i = 0;i < a;i++){
+    		  for(int j = 0;j < a;j++){
+    			  data[i][j] = s.nextInt();
+    			  
+    			  
+    		  }
+    	
+    	  }
+    	  
+    	  int x = 0;
+    	  int y = 0;
+    	  String result = data[y][x] + " ";
+    	  
+    	  int direction = 0;
+    	   
+    	  while(!(x == a - 1 && y == a - 1)){
+    		  if(direction == 0){
+    			  direction = RIGHT;
+    			  
+    		  }else if(direction == RIGHT){
+    			  if(x - 1 >= 0 && y + 1 < a){
+    				  direction = LEFTDOWN;
+    			  }else{
+    				  direction = RIGHTUP;
+    			  }
+    			  
+    		  }else if(direction == DOWN){
+    			  if(x -1 >= 0 && y + 1 < a){
+    				  direction = LEFTDOWN;
+    			  }else{
+    				  direction = RIGHTUP;
+    			  }
+    		  }else if(direction == LEFTDOWN){
+    			  if(x - 1 >= 0 && y + 1 < a){
+    				  direction = LEFTDOWN;
+    			  }else if(y + 1 < a){
+    				  direction = DOWN;
+    			  }else{
+    				 direction = RIGHT;
+    				  
+    			  }
+    		  }else if(direction == RIGHTUP){
+    			  if(y - 1 >= 0 && x + 1 < a){
+    				  direction = RIGHTUP;
+    			  }else if(x + 1 < a)
+    				  direction = RIGHT;
+    			  else
+    				  direction = DOWN;
+    		  }
+    		  switch(direction){
+    		  case RIGHT: x = x + 1;break;
+    		  case DOWN : y = y + 1;break;
+    		  case LEFTDOWN : x = x - 1; y = y + 1;break;
+    		  case RIGHTUP : x = x + 1;y = y - 1;break;
+    		  
+    		  
+    		  }
+    		  
+    		  
+    		  result += data[y][x] + " "; 
+    	  }
+    	  
+    	  
+    	  System.out.println(result);
+    	  
+      }
+      
+}

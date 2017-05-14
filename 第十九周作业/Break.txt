@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Break {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+   Scanner s = new Scanner(System.in);
+	System.out.println("请输入所要输入的总数:");
+	int sum = s.nextInt();
+	int[] a = new int[sum];
+	System.out.println("请输入所要输入的数据:");
+	for(int i = 0;i < a.length;i++){
+		a[i] = s.nextInt();
+	}
+	int summ = 0;
+	for(int i = 0;i < a.length - 2;i++){
+		if(a[i] > a[i + 1] && a[i + 1] > a[i + 2]){
+			continue;
+		}else if(a[i] < a[i + 1] && a[i + 1] < a[i + 2]){
+			continue;
+		}else{
+			summ ++;
+		}
+	}
+	System.out.println("转折点的总数为 :" + summ);
+	
+	
+	
+	s.close();
+	}
+
+}

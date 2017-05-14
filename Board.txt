@@ -1,0 +1,59 @@
+public class Board {
+      public boolean checkMon(int[][] board){
+	  boolean b = true;
+    	  for(int i = 0;i < 3;i++){
+		     for(int j = 0;j < 3;j++){
+		    	 if(board[i][j] == 1){
+					  b = true;
+				  }
+				  if(board[i][j] == -1){
+					  b = false;
+				  }
+		     }
+    	  }
+		   for(int i = 0;i < 3;i++){
+			   for(int j = 0;j < 3;j++){
+				  if(board[j][i] == 1){
+					  b = true;
+				  }
+				  if(board[j][i] == -1){
+					  b = false;
+				  }
+		     }
+		}
+		   for(int i = 0;i < 3;i++){
+			     for(int j = 0;j < 3;j++){	 
+		   if(i == j){
+					  if(board[i][j] == 1){
+						  b = true;
+					  }
+					  if(board[i][j] == -1){
+						  b = false;
+					  }
+				  }
+			     }
+		   }
+		   for(int i = 0;i < 3;i++){
+			     for(int j = 0;j < 3;j++){
+		   if(i + j == 2){
+					  if(board[i][j] == 1){
+						  b = true;
+					  }
+					  if(board[i][j] == -1){
+						  b = false;
+					  }
+			    }			  
+			     }
+		   }
+		  
+	 
+		     
+    	  
+    	  return b;
+      }
+     public static void main(String[] args) {
+		int[][] board = new int[][]{{1,0,1},{1,-1,-1},{1,-1,0}};
+		Board b = new Board();
+		System.out.println(b.checkMon(board));
+	}
+}

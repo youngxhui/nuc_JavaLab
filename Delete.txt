@@ -1,0 +1,28 @@
+﻿class ListNode{
+	int val;
+	ListNode next;
+	public ListNode(int x){
+		val = x;
+	}
+}
+class Sol{
+	
+	public void removeElements(ListNode head,int val){
+		ListNode node = head;
+		if(node == null){
+			System.out.println("链表中没有数");
+		}
+		while(node.next != null){
+			if(node.next.equals(val)){
+                                node.val = node.next.val;
+				node.next = node.next.next;
+			}else{
+                    System.out.println(node.val);
+                    node = node.next;   
+        }
+		}
+		
+		
+		
+	}
+}
